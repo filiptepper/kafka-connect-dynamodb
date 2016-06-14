@@ -21,6 +21,6 @@ object DynamoDBSinkConfig {
     .define(DYNAMODB_AWS_SECRET, Type.STRING, Importance.HIGH, DYNAMODB_AWS_SECRET_DOC)
 }
 
-class TwitterSinkConfig(props: util.Map[String, String])
+class DynamoDBSinkConfig(props: util.Map[String, String])
   extends AbstractConfig(DynamoDBSinkConfig.config, props) {
 }
