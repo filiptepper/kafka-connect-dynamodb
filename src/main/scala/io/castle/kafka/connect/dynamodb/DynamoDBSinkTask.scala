@@ -15,6 +15,8 @@ class DynamoDBSinkTask extends SinkTask with Logging {
   override def start(props: util.Map[String, String]): Unit = {
     logger.info("Starting DynamoDB sink...")
 
+    val taskConfig = new DynamoDBSinkConfig(props)
+
     // this is only local
     // need to change the library so that we can query local dynamodb at any address
     writer = Some(DynamoDB.local())
